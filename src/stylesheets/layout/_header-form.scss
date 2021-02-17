@@ -1,0 +1,19 @@
+.header {
+  &__wrapper {
+    height: rem(110);
+    @include tablet {
+      margin: 0 auto;
+      padding-bottom: rem(20);
+      max-width: 990px;
+    }
+  }
+  &__link {
+    display: inline-block;
+  }
+  &__img {
+    width: rem(200);
+    padding: 0 rem(40);
+    margin-top: rem(15);
+    box-sizing: content-box;
+  }
+}
