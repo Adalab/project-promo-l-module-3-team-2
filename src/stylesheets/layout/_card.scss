@@ -1,3 +1,8 @@
+@import "../core/_functions";
+@import "../core/_mixins";
+@import "../core/_variables";
+@import "../core/_reset";
+
 .card {
   font-family: $font-card;
   margin-bottom: rem(27);
@@ -66,7 +71,7 @@
       display: block;
       width: rem(240);
       height: rem(200);
-      background-image: url('../../images/cardPhoto.png');
+      background-image: url("../../images/cardPhoto.png");
       background-size: cover;
       background-position: center;
     }

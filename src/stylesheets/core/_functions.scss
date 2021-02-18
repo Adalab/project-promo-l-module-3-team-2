@@ -1,3 +1,5 @@
+@import "./variables";
+
 @function rem($pixels) {
-    @return ($pixels / $defaultFontSize * 1rem);
+  @return ($pixels / $defaultFontSize * 1rem);
 }

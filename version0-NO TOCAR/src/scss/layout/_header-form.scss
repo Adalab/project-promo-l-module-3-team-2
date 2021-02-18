@@ -1,4 +1,7 @@
-.header {
+@import 'core/reset';
+@import 'core/mixins';
+@import 'core/functions';
+
   &__wrapper {
     height: rem(110);
     @include tablet {

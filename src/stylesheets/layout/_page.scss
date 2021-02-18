@@ -1,3 +1,8 @@
+@import "../core/_functions";
+@import "../core/_mixins";
+@import "../core/_variables";
+@import "../core/_reset";
+
 .main--flex {
   @include tablet {
     display: flex;
