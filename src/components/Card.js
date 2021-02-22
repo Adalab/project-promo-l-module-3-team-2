@@ -24,7 +24,7 @@ function Card() {
           <a
             href="mailto:username@example.com"
             className="card__data--icon email js-preview-email"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             <i className="fas fa-envelope"></i>
           </a>

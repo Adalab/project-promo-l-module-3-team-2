@@ -1,3 +1,4 @@
+import React from "react";
 //import "../stylesheets/App.scss";
 
 import Header from "./Header.js";

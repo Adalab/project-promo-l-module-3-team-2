@@ -1,3 +1,4 @@
+import React from 'react'
 import "../stylesheets/layout/_card.scss";
 
 function ButtonResetCard() {

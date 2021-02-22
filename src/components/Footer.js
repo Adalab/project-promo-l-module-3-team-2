@@ -13,6 +13,7 @@ function Footer() {
           className="footer__link"
           href="http://www.adalab.es"
           target="_blank"
+          rel="noopener noreferrer"
           title="Ir a web de Adalab"
         >
           <img className="footer__img" src={logoAdalab} alt="Logo Adalab" />
