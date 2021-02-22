@@ -1,17 +1,37 @@
-import React from 'react';
-import '../stylesheets/layout/_collapsable-header.scss';
-import Design from './Design';
-import Fill from './Fill';
-import Share from './Share';
-
+import React from "react";
+import "../stylesheets/layout/_collapsable-header.scss";
+import Collapsable from "./Collapsable";
+import Design from "./Design";
+import Fill from "./Fill";
+import Share from "./Share";
 
 function Form() {
   return (
     <div className="bg__container--design">
       <div className="main__pageContainer">
-        <Design />
-        <Fill />
-        <Share />
+        <Collapsable
+          title="Diseña"
+          iconImg="far fa-object-ungroup"
+          title2="Púlsa aquí para desplegar las opciones de diseño"
+        >
+          <Design />
+        </Collapsable>
+
+        <Collapsable
+          title="Rellena"
+          iconImg="far fa-object-ungroup"
+          title2="Púlsa aquí para desplegar las opciones de rellena"
+        >
+          <Fill />
+        </Collapsable>
+
+        <Collapsable
+          title="Comparte"
+          iconImg="far fa-object-ungroup"
+          title2="Púlsa aquí para desplegar las opciones de comparte"
+        >
+          <Share />
+        </Collapsable>
       </div>
     </div>
   );
