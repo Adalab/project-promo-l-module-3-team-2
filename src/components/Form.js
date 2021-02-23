@@ -19,7 +19,7 @@ function Form() {
 
         <Collapsable
           title="Rellena"
-          iconImg="far fa-object-ungroup"
+          iconImg="far fa-keyboard"
           title2="Púlsa aquí para desplegar las opciones de rellena"
         >
           <Fill />
@@ -27,7 +27,7 @@ function Form() {
 
         <Collapsable
           title="Comparte"
-          iconImg="far fa-object-ungroup"
+          iconImg="fas fa-share-alt"
           title2="Púlsa aquí para desplegar las opciones de comparte"
         >
           <Share />
