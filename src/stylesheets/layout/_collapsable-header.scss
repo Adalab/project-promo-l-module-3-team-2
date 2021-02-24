@@ -37,3 +37,7 @@
     }
   }
 }
+
+.collapsable__container.close .collapsable-content {
+  display: none;
+}
