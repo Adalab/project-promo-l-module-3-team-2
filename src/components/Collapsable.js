@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import "../stylesheets/layout/_collapsable-header.scss";
 
 function Collapsable(props) {
-  const [open, setOpen] = useState(false);
+  const [close, setClose] = useState(true);
 
   const handleClick = () => {
-    setOpen(!open);
+    setClose(!close);
   };
 
-  const openClassName = open ? "" : "close";
+  const closeClassName = close ? "close" : "";
+  const arrowClassName = close ? "header-arrow" : "";
 
   return (
-    <div className={`collapsable__container ${openClassName}`}>
+    <div className={`collapsable__container ${closeClassName}`}>
       <h2
         class="article article__title collapsable__header"
         title={props.title2}
@@ -19,11 +20,11 @@ function Collapsable(props) {
       >
         <span class={`article__icon ${props.iconImg}`} />
         <span class="article__title">{props.title}</span>
-        <span class="fas fa-chevron-up article__icon--collapsible collapsable__header--arrow"></span>
+        <span
+          class={`fas fa-chevron-up article__icon--collapsible collapsable__header--arrow ${arrowClassName}`}
+        ></span>
       </h2>
-      <div className={`collapsable-content ${openClassName}`}>
-        {props.children}
-      </div>
+      <div className={`collapsable-content `}>{props.children}</div>
     </div>
   );
 }
