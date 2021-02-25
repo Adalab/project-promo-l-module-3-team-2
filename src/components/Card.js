@@ -3,28 +3,23 @@ import "../stylesheets/layout/_card.scss";
 
 function Card() {
   return (
-    <article className="card__data js-card">
-      <h2 className="card__data--title name js-preview-name">
-        Nombre Apellido
-      </h2>
-      <h3 className="card__data--title job js-preview-job">
-        Front-end developer
-      </h3>
-      <div className="card__data--img js__profile-image js-preview-photo"></div>
+    <article className="card__data ">
+      <h2 className="card__data--title name ">Nombre Apellido</h2>
+      <h3 className="card__data--title job ">Front-end developer</h3>
+      <div className="card__data--img  "></div>
+
       <ul className="card__data--list">
         <li className="circle">
-          <a
-            href="555 333 222"
-            className="card__data--icon phone js-preview-phone"
-          >
+          <a href="555 333 222" className="card__data--icon phone ">
             <i className="fas fa-mobile-alt"></i>
           </a>
         </li>
         <li className="circle">
           <a
             href="mailto:username@example.com"
-            className="card__data--icon email js-preview-email"
-            target="_blank" rel="noopener noreferrer"
+            className="card__data--icon email"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <i className="fas fa-envelope"></i>
           </a>
@@ -32,7 +27,7 @@ function Card() {
         <li className="circle">
           <a
             href="www.myLinkedIn.com"
-            className="card__data--icon linkedin js-preview-linkedin"
+            className="card__data--icon linkedin"
             target="_blank"
           >
             <i className="fab fa-linkedin-in"></i>
@@ -41,7 +36,7 @@ function Card() {
         <li className="circle">
           <a
             href="www.myGitHub.com"
-            className="card__data--icon github js-preview-github"
+            className="card__data--icon github "
             target="_blank"
           >
             <i className="fab fa-github-alt"></i>
