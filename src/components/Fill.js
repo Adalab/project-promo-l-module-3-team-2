@@ -1,22 +1,21 @@
 import React from "react";
 import "../stylesheets/layout/_fill.scss";
+import Input from "./Input";
 
 function Fill() {
   return (
     <form action="/signup" className="form" method="POST" name="fill-form">
       <fieldset className="fieldset data">
-        <label for="name" className="form__label">
-          Nombre completo <span className="form--required">*</span>
-        </label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          className="form__input"
-          placeholder="Ej: Mary Shelley"
-          required
+        <Input
+          htmlFor="name"
+          labelClass="form__label"
+          labelText=""
+          inputId="name"
+          inputName="name"
+          inputType="text"
+          inputClass="form__input"
+          inputPlaceholder="Ej: Mary Shelley"
         />
-
         <label for="job" className="form__label">
           Puesto <span className="form--required">*</span>
         </label>
