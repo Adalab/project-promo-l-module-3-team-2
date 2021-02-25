@@ -4,7 +4,7 @@ function Input(props) {
   return (
     <>
       <label for={props.htmlFor} className={props.labelClass}>
-        Nombre completo <span className="form--required">*</span>
+        {props.labelText} <span className={props.asterisk}>*</span>
       </label>
       <input
         id={props.inputId}
@@ -12,10 +12,16 @@ function Input(props) {
         type={props.inputType}
         className={props.inputClass}
         placeholder={props.inputPlaceholder}
-        required
+        required={props.isRequired}
       />
     </>
   );
 }
+
+Input.defaultProps = {
+  labelClass: "form__label",
+  inputClass: "form__input",
+  asterisk: "form--required",
+};
 
 export default Input;

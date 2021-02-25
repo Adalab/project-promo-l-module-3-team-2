@@ -8,24 +8,21 @@ function Fill() {
       <fieldset className="fieldset data">
         <Input
           htmlFor="name"
-          labelClass="form__label"
-          labelText=""
+          labelText="Nombre completo"
           inputId="name"
           inputName="name"
           inputType="text"
-          inputClass="form__input"
           inputPlaceholder="Ej: Mary Shelley"
+          isRequired="true"
         />
-        <label for="job" className="form__label">
-          Puesto <span className="form--required">*</span>
-        </label>
-        <input
-          id="job"
-          name="job"
-          type="text"
-          className="form__input"
-          placeholder="Ej: Master of creatures"
-          required
+        <Input
+          htmlFor="job"
+          labelText="Puesto"
+          inputId="job"
+          inputName="job"
+          inputType="text"
+          inputPlaceholder="Ej: Master of creatures"
+          isRequired="true"
         />
       </fieldset>
 
@@ -39,53 +36,41 @@ function Fill() {
           <div className="form__img--container"></div>
         </div>
       </fieldset>
-
       <fieldset className="fieldset social">
-        <label for="email" className="form__label">
-          Email <span className="form--required">*</span>
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          className="form__input"
-          placeholder="Ej: mary.shelley@gmail.com"
-          required
+        <Input
+          htmlFor="email"
+          labelText="Email"
+          inputId="email"
+          inputName="email"
+          inputType="email"
+          inputPlaceholder="Ej: mary.shelley@gmail.com"
+          isRequired="true"
         />
-
-        <label for="phone" className="form__label">
-          Teléfono
-        </label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          className="form__input"
-          placeholder="Ej: 666 66 66 66"
+        <Input
+          htmlFor="phone"
+          labelText="Teléfono"
+          inputId="phone"
+          inputName="phone"
+          inputType="tel"
+          inputPlaceholder="Ej: 666 66 66 66"
         />
-
-        <label for="linkedin" className="form__label">
-          Linkedin <span className="form--required">*</span>
-        </label>
-        <input
-          id="linkedin"
-          name="linkedin"
-          type="text"
-          className="form__input"
-          placeholder="Ej: dr-frankenstein"
-          required
+        <Input
+          htmlFor="linkedin"
+          labelText="Linkedin"
+          inputId="linkedin"
+          inputName="linkedin"
+          inputType="text"
+          inputPlaceholder="Ej: dr-frankenstein"
+          isRequired="true"
         />
-
-        <label for="github" className="form__label">
-          GitHub <span className="form--required">*</span>
-        </label>
-        <input
-          id="github"
-          name="github"
-          type="text"
-          className="form__input"
-          placeholder="Ej: frankensteins-monster"
-          required
+        <Input
+          htmlFor="github"
+          labelText="GitHub"
+          inputId="github"
+          inputName="github"
+          inputType="text"
+          inputPlaceholder="Ej: frankensteins-monster"
+          isRequired="true"
         />
         <label for="required-fields" className="form__label">
           <span className="form--required">*</span> Campos obligatorios
