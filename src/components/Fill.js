@@ -1,23 +1,23 @@
-import React from "react";
-import "../stylesheets/layout/_fill.scss";
-import Input from "./Input";
+import React from 'react';
+import '../stylesheets/layout/_fill.scss';
+import Input from './Input';
+import Label from './Label';
+import PhotoPreview from './PhotoPreview';
 
 function Fill() {
   return (
     <form action="/signup" className="form" method="POST" name="fill-form">
       <fieldset className="fieldset data">
+        <Label htmlFor="name" labelText="Nombre completo" />
         <Input
-          htmlFor="name"
-          labelText="Nombre completo"
           inputId="name"
           inputName="name"
           inputType="text"
           inputPlaceholder="Ej: Mary Shelley"
           isRequired="true"
         />
+        <Label htmlFor="job" labelText="Puesto" />
         <Input
-          htmlFor="job"
-          labelText="Puesto"
           inputId="job"
           inputName="job"
           inputType="text"
@@ -27,45 +27,35 @@ function Fill() {
       </fieldset>
 
       <fieldset className="fieldset">
-        <label for="photo" className="form__label">
-          Imagen de perfil <span className="form--required">*</span>
-        </label>
-        <div className="form__label-div">
-          <button className="form__label--bt">Añadir imagen</button>
-          <input id="photo" name="photo" type="file" className="hidden" />
-          <div className="form__img--container"></div>
-        </div>
+        <Label htmlFor="photo" labelText="Imagen de perfil" />
+        <PhotoPreview />
       </fieldset>
       <fieldset className="fieldset social">
+        <Label htmlFor="email" labelText="Email" />
         <Input
-          htmlFor="email"
-          labelText="Email"
           inputId="email"
           inputName="email"
           inputType="email"
           inputPlaceholder="Ej: mary.shelley@gmail.com"
           isRequired="true"
         />
+        <Label htmlFor="phone" labelText="Teléfono" />
         <Input
-          htmlFor="phone"
-          labelText="Teléfono"
           inputId="phone"
           inputName="phone"
           inputType="tel"
           inputPlaceholder="Ej: 666 66 66 66"
         />
+        <Label htmlFor="linkedin" labelText="Linkedin" />
         <Input
-          htmlFor="linkedin"
-          labelText="Linkedin"
           inputId="linkedin"
           inputName="linkedin"
           inputType="text"
           inputPlaceholder="Ej: dr-frankenstein"
           isRequired="true"
         />
+        <Label htmlFor="github" labelText="GitHub" />
         <Input
-          htmlFor="github"
-          labelText="GitHub"
           inputId="github"
           inputName="github"
           inputType="text"
