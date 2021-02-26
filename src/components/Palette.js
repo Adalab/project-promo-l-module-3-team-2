@@ -1,6 +1,7 @@
 import React from "react";
 
 function Palette(props) {
+  //evento tendria que ir en el input?
   return (
     <label className="design__squareLabel">
       <input type="radio" name="palette" value={props.value} checked />
