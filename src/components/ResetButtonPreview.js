@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import "../stylesheets/layout/_card.scss";
 
 function ButtonResetCard() {
   return (
-    <button className="card__reset js-reset" type="reset">
+    <button className="card__reset " type="reset">
       <i className="far fa-trash-alt"></i> Reset
     </button>
   );
