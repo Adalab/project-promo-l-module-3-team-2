@@ -6,13 +6,12 @@ function Palette(props) {
   };
 
   return (
-
     <label className="design__squareLabel">
       <input
         type="radio"
         name="palette"
         value={props.value}
-        checked={props.palettes === props.value}
+        checked //={props.palettes === props.value}
         onChange={handlePalettes}
       />
       <ul className={`design__square palette-${props.value}`}>
