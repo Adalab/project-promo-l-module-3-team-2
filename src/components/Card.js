@@ -2,6 +2,7 @@ import React from "react";
 import "../stylesheets/layout/_card.scss";
 
 function Card() {
+
   return (
     <article className="card__data ">
       <h2 className="card__data--title name ">Nombre Apellido</h2>
