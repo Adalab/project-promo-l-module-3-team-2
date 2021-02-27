@@ -14,7 +14,6 @@ function Fill() {
           inputName="name"
           inputType="text"
           inputPlaceholder="Ej: Mary Shelley"
-          isRequired="true"
         />
         <Label htmlFor="job" labelText="Puesto" />
         <Input
@@ -22,7 +21,6 @@ function Fill() {
           inputName="job"
           inputType="text"
           inputPlaceholder="Ej: Master of creatures"
-          isRequired="true"
         />
       </fieldset>
 
@@ -37,7 +35,6 @@ function Fill() {
           inputName="email"
           inputType="email"
           inputPlaceholder="Ej: mary.shelley@gmail.com"
-          isRequired="true"
         />
         <Label htmlFor="phone" labelText="Teléfono" />
         <Input
@@ -45,6 +42,8 @@ function Fill() {
           inputName="phone"
           inputType="tel"
           inputPlaceholder="Ej: 666 66 66 66"
+          required=""
+          asterisk=""
         />
         <Label htmlFor="linkedin" labelText="Linkedin" />
         <Input
@@ -52,7 +51,6 @@ function Fill() {
           inputName="linkedin"
           inputType="text"
           inputPlaceholder="Ej: dr-frankenstein"
-          isRequired="true"
         />
         <Label htmlFor="github" labelText="GitHub" />
         <Input
@@ -60,7 +58,6 @@ function Fill() {
           inputName="github"
           inputType="text"
           inputPlaceholder="Ej: frankensteins-monster"
-          isRequired="true"
         />
         <label for="required-fields" className="form__label">
           <span className="form--required">*</span> Campos obligatorios

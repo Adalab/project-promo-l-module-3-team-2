@@ -3,14 +3,17 @@ import React from 'react';
 function Label(props) {
   return (
     <label for={props.htmlFor} className={props.labelClass}>
-      {props.labelText} <span className={props.asterisk}>*</span>
+      {props.labelText}{' '}
+      <span className={props.asteriskClass}>{props.asterisk}</span>
     </label>
   );
 }
 
 Label.defaultProps = {
   labelClass: 'form__label',
-  asterisk: 'form--required',
+  asteriskClass: 'form--required',
+  asterisk: '*',
+  required: true,
 };
 
 export default Label;

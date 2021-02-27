@@ -1,6 +1,13 @@
 import React from 'react';
 
 function Input(props) {
+  const handleInputChange = (ev) => {
+    props.handleInput({
+      inputName: ev.target.name,
+      inputValue: ev.target.value,
+    });
+  };
+
   return (
     <input
       id={props.inputId}
@@ -9,6 +16,8 @@ function Input(props) {
       className={props.inputClass}
       placeholder={props.inputPlaceholder}
       required={props.isRequired}
+      onChange={handleInputChange}
+      value={props.value}
     />
   );
 }
