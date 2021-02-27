@@ -4,7 +4,7 @@ import Input from './Input';
 import Label from './Label';
 import PhotoPreview from './PhotoPreview';
 
-function Fill() {
+function Fill(props) {
   return (
     <form action="/signup" className="form" method="POST" name="fill-form">
       <fieldset className="fieldset data">
@@ -14,7 +14,9 @@ function Fill() {
           inputName="name"
           inputType="text"
           inputPlaceholder="Ej: Mary Shelley"
+          handleInput={props.handleInput}
         />
+
         <Label htmlFor="job" labelText="Puesto" />
         <Input
           inputId="job"
@@ -59,7 +61,7 @@ function Fill() {
           inputType="text"
           inputPlaceholder="Ej: frankensteins-monster"
         />
-        <label for="required-fields" className="form__label">
+        <label htmlFor="required-fields" className="form__label">
           <span className="form--required">*</span> Campos obligatorios
         </label>
       </fieldset>

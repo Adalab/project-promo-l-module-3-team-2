@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 function Palette(props) {
   return (
     <label className="design__squareLabel">
-      <input type="radio" name="palette" value={props.value} checked />
+      <input type="radio" name="palette" value={props.value} /*checked*/ />
       <ul className={props.className}>
         <li className="design__squareColor color-1"></li>
         <li className="design__squareColor color-2"></li>

@@ -1,11 +1,11 @@
-import React from "react";
-import "../stylesheets/layout/_collapsable-header.scss";
-import Collapsable from "./Collapsable";
-import Design from "./Design";
-import Fill from "./Fill";
-import Share from "./Share";
+import React from 'react';
+import '../stylesheets/layout/_collapsable-header.scss';
+import Collapsable from './Collapsable';
+import Design from './Design';
+import Fill from './Fill';
+import Share from './Share';
 
-function Form() {
+function Form(props) {
   return (
     <div className="bg__container--design">
       <div className="main__pageContainer">
@@ -22,7 +22,7 @@ function Form() {
           iconImg="far fa-keyboard"
           title2="Púlsa aquí para desplegar las opciones de rellena"
         >
-          <Fill />
+          <Fill handleInput={props.handleInput} />
         </Collapsable>
 
         <Collapsable

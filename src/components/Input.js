@@ -17,7 +17,7 @@ function Input(props) {
       placeholder={props.inputPlaceholder}
       required={props.isRequired}
       onChange={handleInputChange}
-      value={props.value}
+      value={props.inputValue}
     />
   );
 }

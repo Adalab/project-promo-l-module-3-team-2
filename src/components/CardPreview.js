@@ -1,15 +1,16 @@
-import React from "react";
-import "../stylesheets/layout/_card.scss";
-import Card from "./Card";
-import ButtonResetCard from "./ResetButtonPreview";
+import { checkPropTypes } from 'prop-types';
+import React from 'react';
+import '../stylesheets/layout/_card.scss';
+import Card from './Card';
+import ButtonResetCard from './ResetButtonPreview';
 
-function CardPreview() {
+function CardPreview(props) {
   return (
     <div className="bg__container--card">
       <section className="card">
         <div className="card__container wrapper">
           <ButtonResetCard />
-          <Card />
+          <Card data={props.data} />
         </div>
       </section>
     </div>
