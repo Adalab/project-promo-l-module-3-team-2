@@ -14,8 +14,8 @@ function Fill(props) {
           inputName="name"
           inputType="text"
           inputPlaceholder="Ej: Mary Shelley"
+          inputValue={props.name} // el value es el name que tenemos en App
           handleInput={props.handleInput}
-          handleReset={props.handleReset}
         />
 
         <Label htmlFor="job" labelText="Puesto" />
@@ -24,8 +24,8 @@ function Fill(props) {
           inputName="job"
           inputType="text"
           inputPlaceholder="Ej: Master of creatures"
+          inputValue={props.job} //el value es lo que hemos guardado en App con setState
           handleInput={props.handleInput}
-          handleReset={props.handleReset}
         />
       </fieldset>
 
@@ -40,6 +40,7 @@ function Fill(props) {
           inputName="email"
           inputType="email"
           inputPlaceholder="Ej: mary.shelley@gmail.com"
+          inputValue={props.mail}
           handleInput={props.handleInput}
         />
         <Label htmlFor="phone" labelText="Teléfono" />
@@ -50,6 +51,7 @@ function Fill(props) {
           inputPlaceholder="Ej: 666 66 66 66"
           required=""
           asterisk=""
+          inputValue={props.phone}
           handleInput={props.handleInput}
         />
         <Label htmlFor="linkedin" labelText="Linkedin" />
@@ -58,6 +60,7 @@ function Fill(props) {
           inputName="linkedin"
           inputType="text"
           inputPlaceholder="Ej: dr-frankenstein"
+          inputValue={props.linkedin}
           handleInput={props.handleInput}
         />
         <Label htmlFor="github" labelText="GitHub" />
@@ -66,6 +69,7 @@ function Fill(props) {
           inputName="github"
           inputType="text"
           inputPlaceholder="Ej: frankensteins-monster"
+          inputValue={props.github}
           handleInput={props.handleInput}
         />
         <label htmlFor="required-fields" className="form__label">

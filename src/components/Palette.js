@@ -11,7 +11,7 @@ function Palette(props) {
         type="radio"
         name="palette"
         value={props.value}
-        checked //={props.palettes === props.value}
+        checked={props.palettes === props.value}
         onChange={handlePalettes}
       />
       <ul className={`design__square palette-${props.value}`}>

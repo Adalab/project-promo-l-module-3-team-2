@@ -16,21 +16,15 @@ function App(props) {
   const handleInput = (inputId, inputValue) => {
     if (inputId === "name") {
       setName(inputValue);
-      console.log(inputValue);
     } else if (inputId === "job") {
       setJob(inputValue);
-      console.log(inputValue);
     } else if (inputId === "email") {
-      setEmail(inputValue);
     } else if (inputId === "phone") {
-      setPhone(inputValue);
       console.log(inputValue);
     } else if (inputId === "linkedin") {
       setLinkedin(inputValue);
-      console.log(inputValue);
     } else if (inputId === "github") {
       setGithub(inputValue);
-      console.log(inputValue);
     }
   };
 

@@ -16,7 +16,15 @@ function Main(props) {
           github={props.github}
           handleReset={props.handleReset}
         />
-        <Form handleInput={props.handleInput} handleReset={props.handleReset} />
+        <Form
+          handleInput={props.handleInput}
+          name={props.name}
+          email={props.email}
+          job={props.job}
+          phone={props.phone}
+          linkedin={props.linkedin}
+          github={props.github}
+        />
       </main>
     </div>
   );

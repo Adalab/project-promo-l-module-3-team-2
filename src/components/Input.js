@@ -7,7 +7,7 @@ function Input(props) {
 
   return (
     <input
-      id={props.inputId}
+      id={props.inputName}
       name={props.inputName}
       type={props.inputType}
       className={props.inputClass}

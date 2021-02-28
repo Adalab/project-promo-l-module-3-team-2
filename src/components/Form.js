@@ -24,8 +24,13 @@ function Form(props) {
         >
           <Fill
             name={props.name}
+            email={props.email}
+            job={props.job}
+            mail={props.mail}
+            phone={props.phone}
+            linkedin={props.linkedin}
+            github={props.github}
             handleInput={props.handleInput}
-            handleReset={props.handleReset}
           />
         </Collapsable>
 
