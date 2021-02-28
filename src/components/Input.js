@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function Input(props) {
   const handleInput = (ev) => {
@@ -20,7 +20,7 @@ function Input(props) {
 }
 
 Input.defaultProps = {
-  inputClass: 'form__input',
+  inputClass: "form__input",
 };
 
 export default Input;

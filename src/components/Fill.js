@@ -1,8 +1,8 @@
-import React from 'react';
-import '../stylesheets/layout/_fill.scss';
-import Input from './Input';
-import Label from './Label';
-import PhotoPreview from './PhotoPreview';
+import React from "react";
+import "../stylesheets/layout/_fill.scss";
+import Input from "./Input";
+import Label from "./Label";
+import PhotoPreview from "./PhotoPreview";
 
 function Fill(props) {
   return (
@@ -23,6 +23,7 @@ function Fill(props) {
           inputName="job"
           inputType="text"
           inputPlaceholder="Ej: Master of creatures"
+          handleInput={props.handleInput}
         />
       </fieldset>
 
@@ -37,6 +38,7 @@ function Fill(props) {
           inputName="email"
           inputType="email"
           inputPlaceholder="Ej: mary.shelley@gmail.com"
+          handleInput={props.handleInput}
         />
         <Label htmlFor="phone" labelText="Teléfono" />
         <Input
@@ -46,6 +48,7 @@ function Fill(props) {
           inputPlaceholder="Ej: 666 66 66 66"
           required=""
           asterisk=""
+          handleInput={props.handleInput}
         />
         <Label htmlFor="linkedin" labelText="Linkedin" />
         <Input
@@ -53,6 +56,7 @@ function Fill(props) {
           inputName="linkedin"
           inputType="text"
           inputPlaceholder="Ej: dr-frankenstein"
+          handleInput={props.handleInput}
         />
         <Label htmlFor="github" labelText="GitHub" />
         <Input
@@ -60,6 +64,7 @@ function Fill(props) {
           inputName="github"
           inputType="text"
           inputPlaceholder="Ej: frankensteins-monster"
+          handleInput={props.handleInput}
         />
         <label htmlFor="required-fields" className="form__label">
           <span className="form--required">*</span> Campos obligatorios
