@@ -6,6 +6,7 @@ import Main from "./Main.js";
 import Footer from "./Footer.js";
 
 function App(props) {
+  const [palettes, setPalettes] = useState(0);
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
   const [email, setEmail] = useState("");
@@ -31,8 +32,11 @@ function App(props) {
     } else if (inputId === "github") {
       setGithub(inputValue);
       console.log(inputValue);
-    }
-  };
+    } else if (inputId === "palette") {
+      setPalettes(inputValue);
+      console.log(inputValue);
+    };
+  }
 
   const handleReset = () => {
     setName("");
@@ -41,6 +45,7 @@ function App(props) {
     setEmail("");
     setLinkedin("");
     setGithub("");
+    setPalettes(0);
   };
 
   return (
@@ -53,6 +58,7 @@ function App(props) {
         phone={phone}
         linkedin={linkedin}
         github={github}
+        palette={palettes}
         handleInput={handleInput}
         handleReset={handleReset}
       />
