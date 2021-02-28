@@ -4,8 +4,9 @@ import Collapsable from "./Collapsable";
 import Design from "./Design";
 import Fill from "./Fill";
 import Share from "./Share";
+import Input from "./Input";
 
-function Form() {
+function Form(props) {
   return (
     <div className="bg__container--design">
       <div className="main__pageContainer">
@@ -22,7 +23,7 @@ function Form() {
           iconImg="far fa-keyboard"
           title2="Púlsa aquí para desplegar las opciones de rellena"
         >
-          <Fill />
+          <Fill sendInput={props.handleInput} />
         </Collapsable>
 
         <Collapsable

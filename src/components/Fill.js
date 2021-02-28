@@ -1,10 +1,10 @@
-import React from 'react';
-import '../stylesheets/layout/_fill.scss';
-import Input from './Input';
-import Label from './Label';
-import PhotoPreview from './PhotoPreview';
+import React from "react";
+import "../stylesheets/layout/_fill.scss";
+import Input from "./Input";
+import Label from "./Label";
+import PhotoPreview from "./PhotoPreview";
 
-function Fill() {
+function Fill(props) {
   return (
     <form action="/signup" className="form" method="POST" name="fill-form">
       <fieldset className="fieldset data">
@@ -14,6 +14,7 @@ function Fill() {
           inputName="name"
           inputType="text"
           inputPlaceholder="Ej: Mary Shelley"
+          sendInput={props.sendInput}
         />
         <Label htmlFor="job" labelText="Puesto" />
         <Input
@@ -21,6 +22,7 @@ function Fill() {
           inputName="job"
           inputType="text"
           inputPlaceholder="Ej: Master of creatures"
+          sendInput={props.sendInput}
         />
       </fieldset>
 
@@ -35,6 +37,7 @@ function Fill() {
           inputName="email"
           inputType="email"
           inputPlaceholder="Ej: mary.shelley@gmail.com"
+          sendInput={props.sendInput}
         />
         <Label htmlFor="phone" labelText="Teléfono" />
         <Input

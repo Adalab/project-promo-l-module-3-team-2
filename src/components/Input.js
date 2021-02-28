@@ -1,12 +1,19 @@
-import React from 'react';
+import React from "react";
 
 function Input(props) {
+  /*
   const handleInputChange = (ev) => {
     props.handleInput({
       inputName: ev.target.name,
       inputValue: ev.target.value,
     });
-  };
+  };*/
+
+  function handleInputChange(ev) {
+    const inputName = ev.target.name;
+    const inputValue = ev.target.value;
+    props.sendInput(inputName, inputValue);
+  }
 
   return (
     <input
@@ -21,9 +28,5 @@ function Input(props) {
     />
   );
 }
-
-Input.defaultProps = {
-  inputClass: 'form__input',
-};
 
 export default Input;
