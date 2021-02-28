@@ -2,13 +2,14 @@ import React from "react";
 
 function Palette(props) {
   const handlePalettes = (ev) => {
-    props.handleInput(ev.target.name, props.value);
+    props.handleInput(ev.target.id, props.value);
   };
 
   return (
     <label className="design__squareLabel">
       <input
         type="radio"
+        id="palette"
         name="palette"
         value={props.value}
         checked={props.palettes === props.value}

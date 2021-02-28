@@ -4,7 +4,7 @@ import "../stylesheets/layout/_card.scss";
 
 function Card(props) {
   return (
-    <article className="card__data ">
+    <article className={`card__data palette-${props.palettes}`}>
       <h2 className="card__data--title name ">
         {props.name || "Nombre Apellidos"}
       </h2>
