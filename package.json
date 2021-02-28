@@ -10,7 +10,8 @@
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "^2.0.5",
+    "react-scripts": "^4.0.3",
+    "typescript": "^4.2.2",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
@@ -19,7 +20,6 @@
     "docs": "react-scripts build && rm -rf docs/ && mv build/ docs/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-
   },
   "eslintConfig": {
     "extends": [
