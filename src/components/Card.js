@@ -1,4 +1,4 @@
-import { checkPropTypes } from 'prop-types';
+// import { checkPropTypes } from 'prop-types';
 import React from 'react';
 import '../stylesheets/layout/_card.scss';
 
@@ -6,8 +6,9 @@ function Card(props) {
   return (
     <article className="card__data ">
       <h2 className="card__data--title name ">
-        {props.data || 'Nombre Apellidos'}
+        {props.name || 'Nombre Apellidos'}
       </h2>
+      {/* {props.job || 'Front-end developer'} */}
       <h3 className="card__data--title job ">Front-end developer</h3>
       <div className="card__data--img  "></div>
 

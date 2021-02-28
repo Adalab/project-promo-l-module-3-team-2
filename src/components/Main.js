@@ -7,7 +7,14 @@ function Main(props) {
   return (
     <div className="bg__container">
       <main className="main--flex">
-        <CardPreview data={props.data} />
+        <CardPreview
+          name={props.name}
+          email={props.email}
+          job={props.job}
+          phone={props.phone}
+          linkedin={props.linkedin}
+          github={props.github}
+        />
         <Form handleInput={props.handleInput} />
       </main>
     </div>
