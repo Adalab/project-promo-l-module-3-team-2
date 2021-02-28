@@ -1,5 +1,5 @@
-import React from "react";
-import "../stylesheets/layout/_share.scss";
+import React from 'react';
+import '../stylesheets/layout/_share.scss';
 
 function Share() {
   return (
@@ -15,7 +15,7 @@ function Share() {
         <button type="button" className="shareclick__twitter">
           <i className="fab fa-twitter"></i>
           <a
-            href=""
+            href="www.twitter.com"
             className="shareclick__twitter--text"
             data-show-count="false"
             target="_blank"

@@ -1,94 +1,74 @@
 import React from "react";
 import "../stylesheets/layout/_fill.scss";
+import Input from "./Input";
+import Label from "./Label";
+import PhotoPreview from "./PhotoPreview";
 
-function Fill() {
+function Fill(props) {
   return (
     <form action="/signup" className="form" method="POST" name="fill-form">
       <fieldset className="fieldset data">
-        <label for="name" className="form__label">
-          Nombre completo <span className="form--required">*</span>
-        </label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          className="form__input"
-          placeholder="Ej: Mary Shelley"
-          required
+        <Label htmlFor="name" labelText="Nombre completo" />
+        <Input
+          inputId="name"
+          inputName="name"
+          inputType="text"
+          inputPlaceholder="Ej: Mary Shelley"
+          handleInput={props.handleInput}
+          handleReset={props.handleReset}
         />
 
-        <label for="job" className="form__label">
-          Puesto <span className="form--required">*</span>
-        </label>
-        <input
-          id="job"
-          name="job"
-          type="text"
-          className="form__input"
-          placeholder="Ej: Master of creatures"
-          required
+        <Label htmlFor="job" labelText="Puesto" />
+        <Input
+          inputId="job"
+          inputName="job"
+          inputType="text"
+          inputPlaceholder="Ej: Master of creatures"
+          handleInput={props.handleInput}
+          handleReset={props.handleReset}
         />
       </fieldset>
 
       <fieldset className="fieldset">
-        <label for="photo" className="form__label">
-          Imagen de perfil <span className="form--required">*</span>
-        </label>
-        <div className="form__label-div">
-          <button className="form__label--bt">Añadir imagen</button>
-          <input id="photo" name="photo" type="file" className="hidden" />
-          <div className="form__img--container"></div>
-        </div>
+        <Label htmlFor="photo" labelText="Imagen de perfil" />
+        <PhotoPreview />
       </fieldset>
-
       <fieldset className="fieldset social">
-        <label for="email" className="form__label">
-          Email <span className="form--required">*</span>
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          className="form__input"
-          placeholder="Ej: mary.shelley@gmail.com"
-          required
+        <Label htmlFor="email" labelText="Email" />
+        <Input
+          inputId="email"
+          inputName="email"
+          inputType="email"
+          inputPlaceholder="Ej: mary.shelley@gmail.com"
+          handleInput={props.handleInput}
         />
-
-        <label for="phone" className="form__label">
-          Teléfono
-        </label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          className="form__input"
-          placeholder="Ej: 666 66 66 66"
+        <Label htmlFor="phone" labelText="Teléfono" />
+        <Input
+          inputId="phone"
+          inputName="phone"
+          inputType="tel"
+          inputPlaceholder="Ej: 666 66 66 66"
+          required=""
+          asterisk=""
+          handleInput={props.handleInput}
         />
-
-        <label for="linkedin" className="form__label">
-          Linkedin <span className="form--required">*</span>
-        </label>
-        <input
-          id="linkedin"
-          name="linkedin"
-          type="text"
-          className="form__input"
-          placeholder="Ej: dr-frankenstein"
-          required
+        <Label htmlFor="linkedin" labelText="Linkedin" />
+        <Input
+          inputId="linkedin"
+          inputName="linkedin"
+          inputType="text"
+          inputPlaceholder="Ej: dr-frankenstein"
+          handleInput={props.handleInput}
         />
-
-        <label for="github" className="form__label">
-          GitHub <span className="form--required">*</span>
-        </label>
-        <input
-          id="github"
-          name="github"
-          type="text"
-          className="form__input"
-          placeholder="Ej: frankensteins-monster"
-          required
+        <Label htmlFor="github" labelText="GitHub" />
+        <Input
+          inputId="github"
+          inputName="github"
+          inputType="text"
+          inputPlaceholder="Ej: frankensteins-monster"
+          handleInput={props.handleInput}
         />
-        <label for="required-fields" className="form__label">
+        <label htmlFor="required-fields" className="form__label">
           <span className="form--required">*</span> Campos obligatorios
         </label>
       </fieldset>

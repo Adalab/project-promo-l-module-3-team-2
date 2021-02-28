@@ -1,23 +1,28 @@
+// import { checkPropTypes } from 'prop-types';
 import React from "react";
 import "../stylesheets/layout/_card.scss";
 
-function Card() {
-
+function Card(props) {
   return (
     <article className="card__data ">
-      <h2 className="card__data--title name ">Nombre Apellido</h2>
-      <h3 className="card__data--title job ">Front-end developer</h3>
+      <h2 className="card__data--title name ">
+        {props.name || "Nombre Apellidos"}
+      </h2>
+
+      <h3 className="card__data--title job ">
+        {props.job || "Front-end developer"}
+      </h3>
       <div className="card__data--img  "></div>
 
       <ul className="card__data--list">
         <li className="circle">
-          <a href="555 333 222" className="card__data--icon phone ">
+          <a href={props.phone} className="card__data--icon phone ">
             <i className="fas fa-mobile-alt"></i>
           </a>
         </li>
         <li className="circle">
           <a
-            href="mailto:username@example.com"
+            href={`mailto:${props.email} || username@example.com}`} // consultar Miguel
             className="card__data--icon email"
             target="_blank"
             rel="noopener noreferrer"
@@ -27,7 +32,7 @@ function Card() {
         </li>
         <li className="circle">
           <a
-            href="www.myLinkedIn.com"
+            href={`https://www.linkedin.com/in/${props.linkedin}`}
             className="card__data--icon linkedin"
             target="_blank"
           >
@@ -36,7 +41,7 @@ function Card() {
         </li>
         <li className="circle">
           <a
-            href="www.myGitHub.com"
+            href={`https://www.github.com/${props.github}`}
             className="card__data--icon github "
             target="_blank"
           >

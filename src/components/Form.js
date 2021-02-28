@@ -22,7 +22,11 @@ function Form(props) {
           iconImg="far fa-keyboard"
           title2="Púlsa aquí para desplegar las opciones de rellena"
         >
-          <Fill />
+          <Fill
+            name={props.name}
+            handleInput={props.handleInput}
+            handleReset={props.handleReset}
+          />
         </Collapsable>
 
         <Collapsable
