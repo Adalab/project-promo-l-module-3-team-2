@@ -16,13 +16,13 @@ function Card(props) {
 
       <ul className="card__data--list">
         <li className="circle">
-          <a href={props.phone} className="card__data--icon phone ">
+          <a href={`tel:${props.phone}`} className="card__data--icon phone">
             <i className="fas fa-mobile-alt"></i>
           </a>
         </li>
         <li className="circle">
           <a
-            href={`mailto:${props.email} || username@example.com}`} // consultar Miguel
+            href={props.email === '' ? 'mailto:username@example.com' : `mailto:${props.email}`}
             className="card__data--icon email"
             target="_blank"
             rel="noopener noreferrer"
@@ -49,7 +49,7 @@ function Card(props) {
           </a>
         </li>
       </ul>
-    </article>
+    </article >
   );
 }
 
