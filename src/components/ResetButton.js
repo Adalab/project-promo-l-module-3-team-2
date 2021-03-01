@@ -4,7 +4,6 @@ import "../stylesheets/layout/_card.scss";
 function ResetButton(props) {
   console.log(props);
   const handleClick = () => {
-    console.log("me han clicado");
     props.handleReset();
   };
   return (
