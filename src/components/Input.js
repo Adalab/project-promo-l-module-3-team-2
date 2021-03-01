@@ -12,7 +12,7 @@ function Input(props) {
       type={props.inputType}
       className={props.inputClass}
       placeholder={props.inputPlaceholder}
-      required={props.isRequired}
+      required={props.required}
       onChange={handleInput}
       value={props.inputValue}
     />
@@ -21,6 +21,7 @@ function Input(props) {
 
 Input.defaultProps = {
   inputClass: "form__input",
+  required: true,
 };
 
 export default Input;

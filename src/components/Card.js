@@ -3,26 +3,26 @@ import React from "react";
 import "../stylesheets/layout/_card.scss";
 
 function Card(props) {
-  return (
-    <article className={`card__data palette-${props.palettes}`}>
-      <h2 className="card__data--title name ">
-        {props.name || "Nombre Apellidos"}
-      </h2>
+  const { palettes, name, job, email, linkedin, github, phone } = props;
+  //const palettes = props.palettes;
+  //const name=props.name
 
-      <h3 className="card__data--title job ">
-        {props.job || "Front-end developer"}
-      </h3>
+  return (
+    <article className={`card__data palette-${palettes}`}>
+      <h2 className="card__data--title name ">{name || "Nombre Apellidos"}</h2>
+
+      <h3 className="card__data--title job ">{job || "Front-end developer"}</h3>
       <div className="card__data--img  "></div>
 
       <ul className="card__data--list">
         <li className="circle">
-          <a href={props.phone} className="card__data--icon phone ">
+          <a href={phone} className="card__data--icon phone ">
             <i className="fas fa-mobile-alt"></i>
           </a>
         </li>
         <li className="circle">
           <a
-            href={`mailto:${props.email} || username@example.com}`} // consultar Miguel
+            href={`mailto:${email} || username@example.com}`} // consultar Miguel
             className="card__data--icon email"
             target="_blank"
             rel="noopener noreferrer"
@@ -32,7 +32,7 @@ function Card(props) {
         </li>
         <li className="circle">
           <a
-            href={`https://www.linkedin.com/in/${props.linkedin}`}
+            href={`https://www.linkedin.com/in/${linkedin}`}
             className="card__data--icon linkedin"
             target="_blank"
           >
@@ -41,7 +41,7 @@ function Card(props) {
         </li>
         <li className="circle">
           <a
-            href={`https://www.github.com/${props.github}`}
+            href={`https://www.github.com/${github}`}
             className="card__data--icon github "
             target="_blank"
           >

@@ -20,6 +20,7 @@ function App(props) {
     } else if (inputId === "job") {
       setJob(inputValue);
     } else if (inputId === "email") {
+      setEmail(inputValue);
     } else if (inputId === "phone") {
       console.log(inputValue);
     } else if (inputId === "linkedin") {

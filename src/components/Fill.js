@@ -43,14 +43,13 @@ function Fill(props) {
           inputValue={props.mail}
           handleInput={props.handleInput}
         />
-        <Label htmlFor="phone" labelText="Teléfono" />
+        <Label htmlFor="phone" labelText="Teléfono" asterisk="" />
         <Input
           inputId="phone"
           inputName="phone"
           inputType="tel"
           inputPlaceholder="Ej: 666 66 66 66"
-          required=""
-          asterisk=""
+          required={false}
           inputValue={props.phone}
           handleInput={props.handleInput}
         />
