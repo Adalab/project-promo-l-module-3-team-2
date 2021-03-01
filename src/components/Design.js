@@ -10,20 +10,20 @@ function Design(props) {
       <div className="design__colorcontainer">
         <Palette
           className="palette-0"
-          value={0}
-          palettes={props.palettes}
+          value="0"
+          palette={props.palette}
           handleInput={props.handleInput}
         />
         <Palette
           className="palette-1"
-          value={1}
-          palettes={props.palettes}
+          value="1"
+          palette={props.palette}
           handleInput={props.handleInput}
         />
         <Palette
           className="palette-2"
-          value={2}
-          palettes={props.palettes}
+          value="2"
+          palette={props.palette}
           handleInput={props.handleInput}
         />
       </div>

@@ -40,7 +40,7 @@ function Fill(props) {
           inputName="email"
           inputType="email"
           inputPlaceholder="Ej: mary.shelley@gmail.com"
-          inputValue={props.mail}
+          inputValue={props.email}
           handleInput={props.handleInput}
         />
         <Label htmlFor="phone" labelText="Teléfono" asterisk="" />

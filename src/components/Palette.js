@@ -12,7 +12,7 @@ function Palette(props) {
         id="palette"
         name="palette"
         value={props.value}
-        checked={props.palettes === props.value}
+        checked={props.palette === props.value}
         onChange={handlePalettes}
       />
 

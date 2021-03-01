@@ -3,12 +3,12 @@ import React from "react";
 import "../stylesheets/layout/_card.scss";
 
 function Card(props) {
-  const { palettes, name, job, email, linkedin, github, phone } = props;
+  const { palette, name, job, email, linkedin, github, phone } = props;
   //const palettes = props.palettes;
   //const name=props.name
 
   return (
-    <article className={`card__data palette-${palettes}`}>
+    <article className={`card__data palette-${palette}`}>
       <h2 className="card__data--title name ">{name || "Nombre Apellidos"}</h2>
 
       <h3 className="card__data--title job ">{job || "Front-end developer"}</h3>

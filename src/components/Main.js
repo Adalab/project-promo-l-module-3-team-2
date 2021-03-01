@@ -14,7 +14,7 @@ function Main(props) {
           phone={props.phone}
           linkedin={props.linkedin}
           github={props.github}
-          palette={props.palettes}
+          palette={props.palette}
           handleReset={props.handleReset}
         />
         <Form
@@ -24,6 +24,7 @@ function Main(props) {
           job={props.job}
           phone={props.phone}
           linkedin={props.linkedin}
+          palette={props.palette}
           github={props.github}
         />
       </main>

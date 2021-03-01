@@ -22,15 +22,13 @@ function App(props) {
     } else if (inputId === "email") {
       setEmail(inputValue);
     } else if (inputId === "phone") {
-      console.log(inputValue);
+      setPhone(inputValue);
     } else if (inputId === "linkedin") {
       setLinkedin(inputValue);
     } else if (inputId === "github") {
       setGithub(inputValue);
-      console.log(inputValue);
     } else if (inputId === "palette") {
       setPalettes(inputValue);
-      console.log(inputValue);
     }
   };
 
@@ -41,7 +39,7 @@ function App(props) {
     setEmail("");
     setLinkedin("");
     setGithub("");
-    setPalettes(0);
+    setPalettes("0");
   };
 
   return (

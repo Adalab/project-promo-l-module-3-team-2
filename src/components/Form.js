@@ -14,7 +14,7 @@ function Form(props) {
           iconImg="far fa-object-ungroup"
           title2="Púlsa aquí para desplegar las opciones de diseño"
         >
-          <Design palettes={props.palettes} handleInput={props.handleInput} />
+          <Design palette={props.palette} handleInput={props.handleInput} />
         </Collapsable>
 
         <Collapsable
@@ -26,7 +26,6 @@ function Form(props) {
             name={props.name}
             email={props.email}
             job={props.job}
-            mail={props.mail}
             phone={props.phone}
             linkedin={props.linkedin}
             github={props.github}
