@@ -1,8 +1,8 @@
-import React from "react";
-import "../stylesheets/layout/_fill.scss";
-import Input from "./Input";
-import Label from "./Label";
-import PhotoPreview from "./PhotoPreview";
+import React from 'react';
+import '../stylesheets/layout/_fill.scss';
+import Input from './Input';
+import Label from './Label';
+import PhotoPreview from './PhotoPreview';
 
 function Fill(props) {
   return (
