@@ -16,13 +16,15 @@ function Card(props) {
 
       <ul className="card__data--list">
         <li className="circle">
-          <a href={phone} className="card__data--icon phone ">
+          <a href={`tel:${phone}`} className="card__data--icon phone">
             <i className="fas fa-mobile-alt"></i>
           </a>
         </li>
         <li className="circle">
           <a
-            href={`mailto:${email} || username@example.com}`} // consultar Miguel
+            href={
+              email === "" ? "mailto:username@example.com" : `mailto:${email}`
+            }
             className="card__data--icon email"
             target="_blank"
             rel="noopener noreferrer"
