@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import "../stylesheets/layout/_landing-main.scss";
+import logo from "../images/title-creatures.svg";
 
 const Landing = () => {
     return (
@@ -9,7 +11,7 @@ const Landing = () => {
                 <div className='page__container'>
                     <img
                         className='page__img fly-in-top'
-                        src='./assets/images/title-creatures.svg'
+                        src={logo}
                         alt='Awesome profile-cards'
                     />
                     <h1 className='page__title'>Crea tu tarjeta de visita</h1>
@@ -27,7 +29,7 @@ const Landing = () => {
                             <i className='fas fa-share-alt page__list--icon'></i> Comparte
 					</li>
                     </ul>
-                    <Link to="/cardgenerator" className="className='page__link fly-in-bottom">Comenzar</Link>
+                    <Link to="/cardgenerator" className="page__link fly-in-bottom">Comenzar</Link>
                 </div>
             </main>
             <Footer></Footer>

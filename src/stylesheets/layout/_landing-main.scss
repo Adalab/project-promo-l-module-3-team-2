@@ -1,3 +1,8 @@
+@import '../core/_functions';
+@import '../core/_mixins';
+@import '../core/_variables';
+@import '../core/_reset';
+
 .page {
   width: 100%;
   background-color: $main-bg;
