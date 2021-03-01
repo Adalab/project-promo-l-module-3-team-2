@@ -6,7 +6,7 @@ import Main from "./Main.js";
 import Footer from "./Footer.js";
 
 function App(props) {
-  const [palettes, setPalettes] = useState(0);
+  const [palettes, setPalettes] = useState('0');
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
   const [email, setEmail] = useState("");
@@ -40,7 +40,7 @@ function App(props) {
     setEmail("");
     setLinkedin("");
     setGithub("");
-    setPalettes(0);
+    setPalettes('0');
   };
 
   return (

@@ -17,7 +17,7 @@ function CardPreview(props) {
             phone={props.phone}
             linkedin={props.linkedin}
             github={props.github}
-            palette={props.palettes}
+            palette={props.palette}
             handleReset={props.handleReset}
           />
         </div>
