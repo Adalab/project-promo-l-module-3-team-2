@@ -1,29 +1,26 @@
-import React from 'react';
+import React from "react";
 
 function Input(props) {
-  const handleInputChange = (ev) => {
-    props.handleInput({
-      inputName: ev.target.name,
-      inputValue: ev.target.value,
-    });
+  const handleInput = (ev) => {
+    props.handleInput(ev.target.id, ev.target.value);
   };
 
   return (
     <input
-      id={props.inputId}
+      id={props.inputName}
       name={props.inputName}
       type={props.inputType}
       className={props.inputClass}
       placeholder={props.inputPlaceholder}
       required={props.isRequired}
-      onChange={handleInputChange}
-      value={props.value}
+      onChange={handleInput}
+      value={props.inputValue}
     />
   );
 }
 
 Input.defaultProps = {
-  inputClass: 'form__input',
+  inputClass: "form__input",
 };
 
 export default Input;

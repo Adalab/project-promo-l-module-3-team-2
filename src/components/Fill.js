@@ -1,10 +1,10 @@
-import React from 'react';
-import '../stylesheets/layout/_fill.scss';
-import Input from './Input';
-import Label from './Label';
-import PhotoPreview from './PhotoPreview';
+import React from "react";
+import "../stylesheets/layout/_fill.scss";
+import Input from "./Input";
+import Label from "./Label";
+import PhotoPreview from "./PhotoPreview";
 
-function Fill() {
+function Fill(props) {
   return (
     <form action="/signup" className="form" method="POST" name="fill-form">
       <fieldset className="fieldset data">
@@ -14,13 +14,18 @@ function Fill() {
           inputName="name"
           inputType="text"
           inputPlaceholder="Ej: Mary Shelley"
+          inputValue={props.name} // el value es el name que tenemos en App
+          handleInput={props.handleInput}
         />
+
         <Label htmlFor="job" labelText="Puesto" />
         <Input
           inputId="job"
           inputName="job"
           inputType="text"
           inputPlaceholder="Ej: Master of creatures"
+          inputValue={props.job} //el value es lo que hemos guardado en App con setState
+          handleInput={props.handleInput}
         />
       </fieldset>
 
@@ -35,6 +40,8 @@ function Fill() {
           inputName="email"
           inputType="email"
           inputPlaceholder="Ej: mary.shelley@gmail.com"
+          inputValue={props.mail}
+          handleInput={props.handleInput}
         />
         <Label htmlFor="phone" labelText="Teléfono" />
         <Input
@@ -44,6 +51,8 @@ function Fill() {
           inputPlaceholder="Ej: 666 66 66 66"
           required=""
           asterisk=""
+          inputValue={props.phone}
+          handleInput={props.handleInput}
         />
         <Label htmlFor="linkedin" labelText="Linkedin" />
         <Input
@@ -51,6 +60,8 @@ function Fill() {
           inputName="linkedin"
           inputType="text"
           inputPlaceholder="Ej: dr-frankenstein"
+          inputValue={props.linkedin}
+          handleInput={props.handleInput}
         />
         <Label htmlFor="github" labelText="GitHub" />
         <Input
@@ -58,8 +69,10 @@ function Fill() {
           inputName="github"
           inputType="text"
           inputPlaceholder="Ej: frankensteins-monster"
+          inputValue={props.github}
+          handleInput={props.handleInput}
         />
-        <label for="required-fields" className="form__label">
+        <label htmlFor="required-fields" className="form__label">
           <span className="form--required">*</span> Campos obligatorios
         </label>
       </fieldset>

@@ -5,7 +5,7 @@ import Design from "./Design";
 import Fill from "./Fill";
 import Share from "./Share";
 
-function Form() {
+function Form(props) {
   return (
     <div className="bg__container--design">
       <div className="main__pageContainer">
@@ -14,7 +14,7 @@ function Form() {
           iconImg="far fa-object-ungroup"
           title2="Púlsa aquí para desplegar las opciones de diseño"
         >
-          <Design />
+          <Design palettes={props.palettes} handleInput={props.handleInput} />
         </Collapsable>
 
         <Collapsable
@@ -22,7 +22,16 @@ function Form() {
           iconImg="far fa-keyboard"
           title2="Púlsa aquí para desplegar las opciones de rellena"
         >
-          <Fill />
+          <Fill
+            name={props.name}
+            email={props.email}
+            job={props.job}
+            mail={props.mail}
+            phone={props.phone}
+            linkedin={props.linkedin}
+            github={props.github}
+            handleInput={props.handleInput}
+          />
         </Collapsable>
 
         <Collapsable
