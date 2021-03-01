@@ -15,6 +15,7 @@ function Palette(props) {
         checked={props.palettes === props.value}
         onChange={handlePalettes}
       />
+
       <ul className={`design__square palette-${props.value}`}>
         <li className="design__squareColor color-1"></li>
         <li className="design__squareColor color-2"></li>
