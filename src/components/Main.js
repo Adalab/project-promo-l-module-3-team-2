@@ -2,15 +2,33 @@ import React from "react";
 import "../stylesheets/layout/_page.scss";
 import CardPreview from "./CardPreview";
 import Form from "./Form";
-function Main() {
+
+function Main(props) {
   return (
     <div className="bg__container">
       <main className="main--flex">
-        <CardPreview />
-        <Form />
+        <CardPreview
+          name={props.name}
+          email={props.email}
+          job={props.job}
+          phone={props.phone}
+          linkedin={props.linkedin}
+          github={props.github}
+          palette={props.palette}
+          handleReset={props.handleReset}
+        />
+        <Form
+          handleInput={props.handleInput}
+          name={props.name}
+          email={props.email}
+          job={props.job}
+          phone={props.phone}
+          linkedin={props.linkedin}
+          palette={props.palette}
+          github={props.github}
+        />
       </main>
     </div>
   );
 }
-
 export default Main;

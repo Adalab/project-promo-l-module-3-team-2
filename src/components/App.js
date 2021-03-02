@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 //import "../stylesheets/App.scss";
+import { Route, Switch } from "react-router-dom";
+import Landing from "./Landing";
+import CardGenerator from "./CardGenerator.js";
 
-import Header from "./Header.js";
-import Main from "./Main.js";
-import Footer from "./Footer.js";
-
-function App() {
-  return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
-  );
+const App = () => {
+    return (
+        <>
+            <Switch>
+                <Route exact path='/' component={Landing} />
+                <Route path='/cardgenerator' component={CardGenerator} />
+            </Switch>
+        </>
+    );
 }
 
 export default App;
