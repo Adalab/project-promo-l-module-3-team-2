@@ -1,5 +1,6 @@
 // import { checkPropTypes } from 'prop-types';
 import React from "react";
+import PropTypes from 'prop-types';
 import "../stylesheets/layout/_card.scss";
 
 function Card(props) {
@@ -54,5 +55,14 @@ function Card(props) {
     </article>
   );
 }
+
+
+Card.propTypes = {
+  name: PropTypes.string,
+  email: PropTypes.string,
+  job: PropTypes.string,
+  phone: PropTypes.string
+};
+
 
 export default Card;
