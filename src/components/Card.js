@@ -16,8 +16,6 @@ function Card(props) {
     avatar,
     updateAvatar,
   } = props;
-  //const palettes = props.palettes;
-  //const name=props.name
 
   return (
     <article className={`card__data palette-${palette}`}>

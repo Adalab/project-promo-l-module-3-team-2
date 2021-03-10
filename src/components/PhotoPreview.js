@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "./Button";
 import defaultAvatar from "../images/cardPhoto.png";
 
 class PhotoPreview extends React.Component {
@@ -88,14 +87,5 @@ class PhotoPreview extends React.Component {
     );
   }
 }
-//   return (
-//     <div className="form__label-div">
-//       <Button buttonclassName="form__label--bt" buttonText="Añadir imagen" />
-//       <input id="photo" name="photo" type="file" className="hidden" required />
-
-//       <div className="form__img--container"></div>
-//     </div>
-//   );
-// }
 
 export default PhotoPreview;

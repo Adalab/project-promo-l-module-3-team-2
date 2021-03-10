@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-//import "../stylesheets/App.scss";
-import { Link, Route, Switch } from "react-router-dom";
 import Header from "./Header.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
 import defaultAvatar from "../images/cardPhoto.png";
 
-function CardGenerator(props) {
+function CardGenerator() {
   const [palettes, setPalettes] = useState("0");
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
@@ -36,7 +34,6 @@ function CardGenerator(props) {
 
   function updateAvatar(avatar) {
     setAvatar(avatar);
-    console.log(avatar);
   }
 
   const handleReset = () => {
@@ -70,7 +67,5 @@ function CardGenerator(props) {
     </>
   );
 }
-
-//revisar el estado y ver cómo pasarlo de App a Card
 
 export default CardGenerator;
