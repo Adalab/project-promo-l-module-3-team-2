@@ -16,6 +16,8 @@ function Main(props) {
           github={props.github}
           palette={props.palette}
           handleReset={props.handleReset}
+          avatar={props.avatar}
+          updateAvatar={props.updateAvatar}
         />
         <Form
           handleInput={props.handleInput}
@@ -26,6 +28,8 @@ function Main(props) {
           linkedin={props.linkedin}
           palette={props.palette}
           github={props.github}
+          avatar={props.avatar}
+          updateAvatar={props.updateAvatar}
         />
       </main>
     </div>

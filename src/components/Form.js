@@ -31,6 +31,7 @@ function Form(props) {
             github={props.github}
             handleInput={props.handleInput}
             updateAvatar={props.updateAvatar}
+            avatar={props.avatar}
           />
         </Collapsable>
 

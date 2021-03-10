@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 //import "../stylesheets/App.scss";
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch } from "react-router-dom";
 import Header from "./Header.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
-
-
+import defaultAvatar from "../images/cardPhoto.png";
 
 function CardGenerator(props) {
   const [palettes, setPalettes] = useState("0");
@@ -15,9 +14,7 @@ function CardGenerator(props) {
   const [phone, setPhone] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
-  const [avatar, setProfile] = useState('');
-
-
+  const [avatar, setAvatar] = useState([defaultAvatar]);
 
   const handleInput = (inputId, inputValue) => {
     if (inputId === "name") {
@@ -38,9 +35,9 @@ function CardGenerator(props) {
   };
 
   function updateAvatar(avatar) {
-    setProfile({ avatar: avatar });
+    setAvatar(avatar);
+    console.log(avatar);
   }
-
 
   const handleReset = () => {
     setName("");
@@ -65,6 +62,7 @@ function CardGenerator(props) {
         palette={palettes}
         handleInput={handleInput}
         handleReset={handleReset}
+        avatar={avatar}
         updateAvatar={updateAvatar}
       />
       <Footer />

@@ -20,6 +20,7 @@ function CardPreview(props) {
             palette={props.palette}
             handleReset={props.handleReset}
             updateAvatar={props.updateAvatar}
+            avatar={props.avatar}
           />
         </div>
       </section>

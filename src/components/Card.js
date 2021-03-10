@@ -1,10 +1,21 @@
 // import { checkPropTypes } from 'prop-types';
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import "../stylesheets/layout/_card.scss";
+import Profile from "./Profile.js";
 
 function Card(props) {
-  const { palette, name, job, email, linkedin, github, phone } = props;
+  const {
+    palette,
+    name,
+    job,
+    email,
+    linkedin,
+    github,
+    phone,
+    avatar,
+    updateAvatar,
+  } = props;
   //const palettes = props.palettes;
   //const name=props.name
 
@@ -13,7 +24,8 @@ function Card(props) {
       <h2 className="card__data--title name ">{name || "Nombre Apellidos"}</h2>
 
       <h3 className="card__data--title job ">{job || "Front-end developer"}</h3>
-      <div className="card__data--img  "></div>
+
+      <Profile avatar={avatar} updateAvatar={updateAvatar} />
 
       <ul className="card__data--list">
         <li className="circle">
@@ -56,13 +68,11 @@ function Card(props) {
   );
 }
 
-
 Card.propTypes = {
   name: PropTypes.string,
   email: PropTypes.string,
   job: PropTypes.string,
-  phone: PropTypes.string
+  phone: PropTypes.string,
 };
-
 
 export default Card;
