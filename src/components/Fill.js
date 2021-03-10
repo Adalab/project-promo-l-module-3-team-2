@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../stylesheets/layout/_fill.scss';
 import Input from './Input';
 import Label from './Label';
 import PhotoPreview from './PhotoPreview';
+import Profile from './Profile';
+
 
 function Fill(props) {
+
   return (
     <form action="/signup" className="form" method="POST" name="fill-form">
       <fieldset className="fieldset data">
@@ -31,7 +34,8 @@ function Fill(props) {
 
       <fieldset className="fieldset">
         <Label htmlFor="photo" labelText="Imagen de perfil" />
-        <PhotoPreview />
+        <PhotoPreview avatar={props.avatar} updateAvatar={props.updateAvatar} />
+        <Profile avatar={props.avatar} />
       </fieldset>
       <fieldset className="fieldset social">
         <Label htmlFor="email" labelText="Email" />

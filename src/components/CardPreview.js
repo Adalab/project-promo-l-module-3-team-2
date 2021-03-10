@@ -19,6 +19,7 @@ function CardPreview(props) {
             github={props.github}
             palette={props.palette}
             handleReset={props.handleReset}
+            updateAvatar={props.updateAvatar}
           />
         </div>
       </section>

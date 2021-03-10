@@ -6,6 +6,7 @@ import Main from "./Main.js";
 import Footer from "./Footer.js";
 
 
+
 function CardGenerator(props) {
   const [palettes, setPalettes] = useState("0");
   const [name, setName] = useState("");
@@ -14,6 +15,9 @@ function CardGenerator(props) {
   const [phone, setPhone] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
+  const [avatar, setProfile] = useState('');
+
+
 
   const handleInput = (inputId, inputValue) => {
     if (inputId === "name") {
@@ -32,6 +36,11 @@ function CardGenerator(props) {
       setPalettes(inputValue);
     }
   };
+
+  function updateAvatar(avatar) {
+    setProfile({ avatar: avatar });
+  }
+
 
   const handleReset = () => {
     setName("");
@@ -56,6 +65,7 @@ function CardGenerator(props) {
         palette={palettes}
         handleInput={handleInput}
         handleReset={handleReset}
+        updateAvatar={updateAvatar}
       />
       <Footer />
     </>
