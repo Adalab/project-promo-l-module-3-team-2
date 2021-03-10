@@ -47,6 +47,7 @@ function CardGenerator(props) {
     setLinkedin("");
     setGithub("");
     setPalettes("0");
+    setAvatar([defaultAvatar]);
   };
 
   return (
