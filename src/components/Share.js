@@ -17,7 +17,7 @@ function Share(props) {
           <button type="button" className="shareclick__twitter">
             <i className="fab fa-twitter"></i>
             <a
-              href="www.twitter.com"
+              href={`https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=${props.serverData.cardURL}`}
               className="shareclick__twitter--text"
               data-show-count="false"
               target="_blank"
@@ -28,7 +28,7 @@ function Share(props) {
         </div>
       );
     } else {
-      return <p>Revisa que los campos obligatorios están rellenos</p>;
+      return <p>Revisa todos los campos obligatorios</p>;
     }
   };
 
