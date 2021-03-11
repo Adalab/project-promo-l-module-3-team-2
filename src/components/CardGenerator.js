@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "./Header.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
-import defaultAvatar from "../images/cardPhoto.png";
+import fetchAPI from "../services/Api";
 
 function CardGenerator() {
   const [palettes, setPalettes] = useState("0");
@@ -12,7 +12,8 @@ function CardGenerator() {
   const [phone, setPhone] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
-  const [avatar, setAvatar] = useState([defaultAvatar]);
+  const [avatar, setAvatar] = useState("");
+  const [serverData, setServerData] = useState({});
 
   const handleInput = (inputId, inputValue) => {
     if (inputId === "name") {
@@ -44,7 +45,26 @@ function CardGenerator() {
     setLinkedin("");
     setGithub("");
     setPalettes("0");
-    setAvatar([defaultAvatar]);
+    setAvatar("");
+  };
+
+  const handleShare = () => {
+    console.log("me han clicado");
+    const userData = {
+      palette: parseInt(palettes) + 1,
+      name: name,
+      job: job,
+      phone: phone,
+      email: email,
+      linkedin: linkedin,
+      github: github,
+      photo: avatar,
+    };
+    console.log(userData);
+    fetchAPI(userData).then((serverData) => {
+      console.log(serverData);
+      setServerData(serverData);
+    });
   };
 
   return (
@@ -62,6 +82,8 @@ function CardGenerator() {
         handleReset={handleReset}
         avatar={avatar}
         updateAvatar={updateAvatar}
+        handleShare={handleShare}
+        serverData={serverData}
       />
       <Footer />
     </>

@@ -40,7 +40,10 @@ function Form(props) {
           iconImg="fas fa-share-alt"
           title2="Púlsa aquí para desplegar las opciones de comparte"
         >
-          <Share />
+          <Share
+            handleShare={props.handleShare}
+            serverData={props.serverData}
+          />
         </Collapsable>
       </div>
     </div>

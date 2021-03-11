@@ -30,6 +30,8 @@ function Main(props) {
           github={props.github}
           avatar={props.avatar}
           updateAvatar={props.updateAvatar}
+          handleShare={props.handleShare}
+          serverData={props.serverData}
         />
       </main>
     </div>
