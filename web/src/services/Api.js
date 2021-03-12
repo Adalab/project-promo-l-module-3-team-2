@@ -1,5 +1,5 @@
 const fetchAPI = (data) => {
-  const url = "https://awesome-profile-cards.herokuapp.com/card";
+  const url = "https://localhost:3000.herokuapp.com/card";
 
   return fetch(url, {
     method: "POST",
