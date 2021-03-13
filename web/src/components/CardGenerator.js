@@ -6,38 +6,39 @@ import fetchAPI from "../services/Api";
 import ls from "../services/LocalStorage";
 
 function CardGenerator() {
-  // const localStorageData = ls.get("data") || {};
-  // const [palettes, setPalettes] = useState(localStorageData.palettes || 0);
-  // const [name, setName] = useState(localStorageData.name);
-  // const [job, setJob] = useState(localStorageData.job);
-  // const [email, setEmail] = useState(localStorageData.email);
-  // const [phone, setPhone] = useState(localStorageData.phone);
-  // const [linkedin, setLinkedin] = useState(localStorageData.linkedin);
-  // const [github, setGithub] = useState(localStorageData.github);
-  // const [avatar, setAvatar] = useState(localStorageData.avatar);
-  // const [serverData, setServerData] = useState({});
-
-  // useEffect(() => {
-  //   ls.set("data", {
-  //     palettes: palettes,
-  //     name: name,
-  //     job: job,
-  //     email: email,
-  //     phone: phone,
-  //     linkedin: linkedin,
-  //     github: github,
-  //   });
-  // });
-
-  const [palettes, setPalettes] = useState("0");
-  const [name, setName] = useState("");
-  const [job, setJob] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [linkedin, setLinkedin] = useState("");
-  const [github, setGithub] = useState("");
-  const [avatar, setAvatar] = useState("");
+  const localStorageData = ls.get("data") || {};
+  const [palettes, setPalettes] = useState(localStorageData.palettes || 0);
+  const [name, setName] = useState(localStorageData.name);
+  const [job, setJob] = useState(localStorageData.job);
+  const [email, setEmail] = useState(localStorageData.email);
+  const [phone, setPhone] = useState(localStorageData.phone);
+  const [linkedin, setLinkedin] = useState(localStorageData.linkedin);
+  const [github, setGithub] = useState(localStorageData.github);
+  const [avatar, setAvatar] = useState(localStorageData.avatar);
   const [serverData, setServerData] = useState({});
+
+  useEffect(() => {
+    ls.set("data", {
+      palettes: palettes,
+      name: name,
+      job: job,
+      email: email,
+      phone: phone,
+      linkedin: linkedin,
+      github: github,
+      avatar: avatar,
+    });
+  });
+
+  // const [palettes, setPalettes] = useState("0");
+  // const [name, setName] = useState("");
+  // const [job, setJob] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [linkedin, setLinkedin] = useState("");
+  // const [github, setGithub] = useState("");
+  // const [avatar, setAvatar] = useState("");
+  // const [serverData, setServerData] = useState({});
 
   const handleInput = (inputId, inputValue) => {
     if (inputId === "name") {
