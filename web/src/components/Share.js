@@ -6,7 +6,7 @@ function Share(props) {
   const handleShare = () => {
     props.handleShare();
   };
-  console.log(props);
+  // console.log(props);
   const shareCard = () => {
     if (props.serverData.success === true) {
       return (
