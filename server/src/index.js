@@ -15,7 +15,9 @@ app.listen(serverPort, () => {
   console.log(`App listening at http://localhost:${serverPort}`);
 });
 
+const userData = require("./data.json");
+
 app.post("/card", (req, res) => {
-  console.log(req.body);
-  res.json(["hola"]);
+  console.log(userData);
+  res.json([userData]);
 });

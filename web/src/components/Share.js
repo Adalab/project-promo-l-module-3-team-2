@@ -1,18 +1,23 @@
 import propTypes from "prop-types";
-import React from "react";
+//import React from "react";
 import "../stylesheets/layout/_share.scss";
+import React, { useState } from "react";
 
 function Share(props) {
   const handleShare = () => {
     props.handleShare();
   };
-  // console.log(props);
+
   const shareCard = () => {
     if (props.serverData.success === true) {
       return (
         <>
           <h3 className="shareclick__title">La tarjeta ha sido creada:</h3>
-          <p className="shareclick__text">{props.serverData.cardURL}</p>
+          <p className="shareclick__text">
+            <a className="shareclick__text" href={props.serverData.cardURL}>
+              {props.serverData.cardURL}
+            </a>
+          </p>
 
           <button type="button" className="shareclick__twitter">
             <i className="fab fa-twitter"></i>
