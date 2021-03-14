@@ -10,7 +10,7 @@ function Share(props) {
   const shareCard = () => {
     if (props.serverData.success === true) {
       return (
-        <div className="shareclick">
+        <>
           <h3 className="shareclick__title">La tarjeta ha sido creada:</h3>
           <p className="shareclick__text">{props.serverData.cardURL}</p>
 
@@ -25,10 +25,15 @@ function Share(props) {
               Compartir en twitter
             </a>
           </button>
-        </div>
+        </>
       );
     } else {
-      return <p>Revisa todos los campos obligatorios</p>;
+      return (
+        <>
+          <p>La tarjeta no puede ser creada.</p>
+          <p>Por favor revisa que todos los campos enten rellenos.</p>
+        </>
+      );
     }
   };
 
@@ -38,7 +43,7 @@ function Share(props) {
         <i className="far fa-id-card"></i>
         <span className="share__button--text"> Crear tarjeta </span>
       </button>
-      {shareCard()}
+      <div className={`shareclick ${props.hiddenClass}`}>{shareCard()}</div>
     </div>
   );
 }
