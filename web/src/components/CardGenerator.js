@@ -16,7 +16,6 @@ function CardGenerator() {
   const [github, setGithub] = useState(localStorageData.github);
   const [avatar, setAvatar] = useState(localStorageData.avatar);
   const [serverData, setServerData] = useState({});
-  const [hiddenClass, setHiddenClass] = useState("hidden");
 
   useEffect(() => {
     ls.set("data", {
@@ -72,12 +71,11 @@ function CardGenerator() {
     setGithub("");
     setPalettes("0");
     setAvatar("");
-    setHiddenClass("hidden");
+    setServerData({});
   };
 
   const handleShare = () => {
     console.log("me han clicado");
-    setHiddenClass("");
     const userData = {
       palette: parseInt(palettes) + 1,
       name: name,
@@ -88,6 +86,7 @@ function CardGenerator() {
       github: github,
       photo: avatar,
     };
+    setServerData({ success: "loading" });
     fetchAPI(userData).then((serverData) => {
       console.log(serverData);
       setServerData(serverData);
@@ -111,7 +110,6 @@ function CardGenerator() {
         updateAvatar={updateAvatar}
         handleShare={handleShare}
         serverData={serverData}
-        hiddenClass={hiddenClass}
       />
       <Footer />
     </>

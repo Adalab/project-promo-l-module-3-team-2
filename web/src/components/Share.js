@@ -32,11 +32,17 @@ function Share(props) {
           </button>
         </>
       );
-    } else {
+    } else if (props.serverData.success === false) {
       return (
         <>
           <p>La tarjeta no puede ser creada.</p>
-          <p>Por favor revisa que todos los campos enten rellenos.</p>
+          <p>Por favor revisa que todos los campos estén rellenos.</p>
+        </>
+      );
+    } else if (props.serverData.success === "loading") {
+      return (
+        <>
+          <p>Cargando...</p>
         </>
       );
     }
@@ -48,7 +54,7 @@ function Share(props) {
         <i className="far fa-id-card"></i>
         <span className="share__button--text"> Crear tarjeta </span>
       </button>
-      <div className={`shareclick ${props.hiddenClass}`}>{shareCard()}</div>
+      <div className="shareclick">{shareCard()}</div>
     </div>
   );
 }

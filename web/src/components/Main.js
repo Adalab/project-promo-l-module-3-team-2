@@ -32,7 +32,6 @@ function Main(props) {
           updateAvatar={props.updateAvatar}
           handleShare={props.handleShare}
           serverData={props.serverData}
-          hiddenClass={props.hiddenClass}
         />
       </main>
     </div>

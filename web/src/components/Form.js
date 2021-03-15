@@ -43,7 +43,6 @@ function Form(props) {
           <Share
             handleShare={props.handleShare}
             serverData={props.serverData}
-            hiddenClass={props.hiddenClass}
           />
         </Collapsable>
       </div>
