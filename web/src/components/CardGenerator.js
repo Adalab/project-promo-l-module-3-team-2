@@ -4,6 +4,7 @@ import Main from "./Main.js";
 import Footer from "./Footer.js";
 import fetchAPI from "../services/Api";
 import ls from "../services/LocalStorage";
+import defaultAvatar from "../images/cardPhoto.png"
 
 function CardGenerator() {
   const localStorageData = ls.get("data") || {};
@@ -14,7 +15,7 @@ function CardGenerator() {
   const [phone, setPhone] = useState(localStorageData.phone);
   const [linkedin, setLinkedin] = useState(localStorageData.linkedin);
   const [github, setGithub] = useState(localStorageData.github);
-  const [avatar, setAvatar] = useState(localStorageData.avatar);
+  const [avatar, setAvatar] = useState(localStorageData.avatar || defaultAvatar);
   const [serverData, setServerData] = useState({});
 
   useEffect(() => {
