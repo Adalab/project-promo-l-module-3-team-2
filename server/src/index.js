@@ -15,8 +15,11 @@ app.listen(serverPort, () => {
   console.log(`App listening at http://localhost:${serverPort}`);
 });
 
+const staticServerPath = "./public"; // relative to the root of the project
+app.use(express.static(staticServerPath));
+
 //const userData = require("./data.json");
-const userData = {
+/*const userData = {
   palette: 1,
   name: "Carmen",
   job: "developer",
@@ -26,10 +29,20 @@ const userData = {
   github: "carmen-ramos",
   photo: "image",
 };
-
+*/
 app.post("/card", (req, res) => {
   console.log(userData);
-  res.json(["hola"]);
+  const userData = {
+    palette: 1,
+    name: "Carmen",
+    job: "developer",
+    email: "carmen.rama91@gmail.com",
+    phone: "673152665",
+    linkedin: "carmen-ramos",
+    github: "carmen-ramos",
+    photo: "image",
+  };
+  res.json([userData]);
 });
 
 /*
