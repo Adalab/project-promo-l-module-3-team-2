@@ -5,14 +5,11 @@ const express = require("express");
 const app = express();
 app.use(express.json({ limit: "10mb" }));
 app.use(
-  cors({
-    origin: "http://localhost:3001",
-  })
+  cors()
 );
 
 //set template engine 
-
-// server.set('view engine', 'ejs');
+server.set('view engine', 'ejs');
 
 
 // init express aplication
@@ -39,7 +36,7 @@ app.post("/card", (req, res) => {
       success: false,
       error: "Mandatory fields: job",
     });
-  } else if (!req.body.photo || req.body.photo === getAvatar) {
+  } else if (!req.body.photo || req.body.photo === '') {
     res.status(404).json({
       success: false,
       error: "Mandatory fields: photo",
