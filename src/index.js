@@ -1,5 +1,7 @@
 const cors = require("cors");
 const express = require("express");
+const Database = require('better-sqlite3');
+
 // SERVER
 // config server
 const app = express();
@@ -9,7 +11,7 @@ app.use(
 );
 
 //set template engine 
-server.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
 
 // init express aplication
@@ -18,14 +20,23 @@ app.listen(serverPort, () => {
   console.log(`App listening at http://localhost:${serverPort}`);
 });
 
+const db = new Database('./src/database.db', {
+  // this line log in console all data base queries
+  verbose: console.log
+});
+
 const staticServerPath = "./public"; // relative to the root of the project
 app.use(express.static(staticServerPath));
 
+app.get('/card/:id', (req, res) => {
+  const query = db.prepare(`SELECT * FROM cards WHERE id = ?`);
+  const database = query.get(req.params.id);
+  console.log(database);
+
+  res.render('pages/card', database);
+});
+
 app.post("/card", (req, res) => {
-  const userData = req.body; // recibimos los datos de name,phone,job....
-
-  console.log(req.body);
-
   if (!req.body.name || req.body.name === "") {
     res.status(404).json({
       success: false,
@@ -62,9 +73,17 @@ app.post("/card", (req, res) => {
       error: "Mandatory fields: github",
     });
   } else {
-    // Insertar en la base de datos
-    // Responder que ha ido bien
 
+    // Insertar en la base de datos
+    const query = db.prepare(`INSERT INTO cards (palette, name, job, photo, email, phone, linkedin, github ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`);
+    const result = query.run(req.body.palette, req.body.name, req.body.job, req.body.photo, req.body.email, req.body.phone, req.body.linkedin, req.body.github);
+    res.json({
+      success: true,
+      cardURL: `http://localhost:3000/card/${result.lastInsertRowid}`
+    });
+
+
+    // Responder que ha ido bien
     res.json({
       success: true,
     });
