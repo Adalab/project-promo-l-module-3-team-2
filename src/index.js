@@ -10,8 +10,12 @@ app.use(
   })
 );
 
+//set template engine 
+// server.set('view engine', 'ejs');
+
+
 // init express aplication
-const serverPort = 3000;
+const serverPort = process.env.PORT || 3000;
 app.listen(serverPort, () => {
   console.log(`App listening at http://localhost:${serverPort}`);
 });
