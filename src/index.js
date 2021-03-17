@@ -73,10 +73,12 @@ app.post("/card", (req, res) => {
       );
       response.success = true;
 
-      if (req.host === "localhost") {
-        response.cardURL = `http://localhost:3000/card/${result.lastInsertRowid}`;
-      } else {
-        response.cardURL = `https://awesome-profile-card-team2.herokuapp.com/card/${result.lastInsertRowid}`;
+      if (req.hostname === "localhost") {
+        response.cardURL = `http://awesome-profile-cards.herokuapp.com/card/${result.lastInsertRowid}`;
+      } else if (
+        req.hostname === "`http://awesome-profile-cards-team2.herokuapp.com/"
+      ) {
+        response.cardURL = `http://awesome-profile-cards.herokuapp.com/card/${result.lastInsertRowid}`;
       }
     } catch (dbError) {
       response.success = false;
