@@ -3,7 +3,6 @@ import "../stylesheets/layout/_fill.scss";
 import Input from "./Input";
 import Label from "./Label";
 import PhotoPreview from "./PhotoPreview";
-import Profile from "./Profile";
 
 function Fill(props) {
   return (
@@ -15,7 +14,7 @@ function Fill(props) {
           inputName="name"
           inputType="text"
           inputPlaceholder="Ej: Mary Shelley"
-          inputValue={props.name} // el value es el name que tenemos en App
+          inputValue={props.name}
           handleInput={props.handleInput}
         />
 
@@ -25,7 +24,7 @@ function Fill(props) {
           inputName="job"
           inputType="text"
           inputPlaceholder="Ej: Master of creatures"
-          inputValue={props.job} //el value es lo que hemos guardado en App con setState
+          inputValue={props.job}
           handleInput={props.handleInput}
         />
       </fieldset>
@@ -33,7 +32,6 @@ function Fill(props) {
       <fieldset className="fieldset">
         <Label htmlFor="photo" labelText="Imagen de perfil" />
         <PhotoPreview avatar={props.avatar} updateAvatar={props.updateAvatar} />
-        {/* <Profile avatar={props.avatar} updateAvatar={props.updateAvatar} /> */}
       </fieldset>
       <fieldset className="fieldset social">
         <Label htmlFor="email" labelText="Email" />

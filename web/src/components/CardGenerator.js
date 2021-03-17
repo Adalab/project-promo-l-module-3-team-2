@@ -4,7 +4,7 @@ import Main from "./Main.js";
 import Footer from "./Footer.js";
 import fetchAPI from "../services/Api";
 import ls from "../services/LocalStorage";
-import defaultAvatar from "../images/cardPhoto.png"
+import defaultAvatar from "../images/cardPhoto.png";
 
 function CardGenerator() {
   const localStorageData = ls.get("data") || {};
@@ -15,7 +15,9 @@ function CardGenerator() {
   const [phone, setPhone] = useState(localStorageData.phone);
   const [linkedin, setLinkedin] = useState(localStorageData.linkedin);
   const [github, setGithub] = useState(localStorageData.github);
-  const [avatar, setAvatar] = useState(localStorageData.avatar || defaultAvatar);
+  const [avatar, setAvatar] = useState(
+    localStorageData.avatar || defaultAvatar
+  );
   const [serverData, setServerData] = useState({});
 
   useEffect(() => {
@@ -30,16 +32,6 @@ function CardGenerator() {
       avatar: avatar,
     });
   });
-
-  // const [palettes, setPalettes] = useState("0");
-  // const [name, setName] = useState("");
-  // const [job, setJob] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [phone, setPhone] = useState("");
-  // const [linkedin, setLinkedin] = useState("");
-  // const [github, setGithub] = useState("");
-  // const [avatar, setAvatar] = useState("");
-  // const [serverData, setServerData] = useState({});
 
   const handleInput = (inputId, inputValue) => {
     if (inputId === "name") {
@@ -76,7 +68,6 @@ function CardGenerator() {
   };
 
   const handleShare = () => {
-    console.log("me han clicado");
     const userData = {
       palette: parseInt(palettes) + 1,
       name: name,
@@ -89,7 +80,6 @@ function CardGenerator() {
     };
     setServerData({ success: "loading" });
     fetchAPI(userData).then((serverData) => {
-      console.log(serverData);
       setServerData(serverData);
     });
   };

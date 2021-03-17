@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 function Input(props) {
   const handleInput = (ev) => {
@@ -21,14 +21,13 @@ function Input(props) {
 }
 
 Input.defaultProps = {
-  inputClass: 'form__input',
+  inputClass: "form__input",
   required: true,
 };
 
 Input.propTypes = {
   required: PropTypes.bool,
   name: PropTypes.string,
-  // inputName: PropTypes.string, // funciona igual que la línea anterior
   id: PropTypes.string,
 };
 
