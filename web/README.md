@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Creatures of Java Script & Nothing to commit / Código heredado
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Nuestra misión: refactorizar la web Creatures of Java Script usando React para aprender a trabajar con un código heredado, mantenerlo y actualizarlo con otras tecnologías. Creación de un servidor y una base de datos para almacenar la información de las usuarias. Poner en producción un proyecto completo: front end + back end. Mejorar la comunicación entre los miembros del equipo y con otros equipos de desarrollo.
 
-## Available Scripts
+[Click aquí para el proyecto refactorizado.](https://github.com/Adalab/project-promo-l-module-3-team-2)
 
-In the project directory, you can run:
+El proyecto original, [Creatures of Java Script](https://beta.adalab.es/project-promo-l-module-2-team-7/) es una web interactiva para creación de tarjetas de visita digitales creada con JavaScript por un equipo diferente. [Aquí el enlace al repositorio](https://github.com/Adalab/project-promo-l-module-2-team-7) del proyecto original.
 
-### `npm start`
+## Datos técnicos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React para estructurar el proyecto realizado con JavaScript.
+- React Router con el objetivo de mejorar la navegación entre las páginas.
+- Node JS y Express JS para escuchar peticiones de otros navegadores.
+- SQL para crear una base de datos y guardar información de forma persistente.
+- POSTMAN en realización de pruebas.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Cómo instalarlo
 
-### `npm test`
+1. Copia el enlace del repositorio y clónalo con éste comando en la terminal:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone
+```
 
-### `npm run build`
+1. Instala las dependencias locales ejecutando en la terminal el comando:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Arranca el proyecto en modo desarrollo ejecutando en la terminal:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+1. Para publicar el proyecto en GitHub Pages ejecuta (atajo para npm run docs && push docs/):
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm run deploy
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este motor de plantillas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Feedback
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+¿Te interesa el proyecto? Si tienes alguna duda, sugerencia o idea, no dudes en contactarnos:
 
-## Learn More
+## Equipo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Elisa Alcocer](https://www.linkedin.com/in/elisalcocer/)
+- [Teresa Martínez](https://www.linkedin.com/in/teresamarfer/)
+- [Carmen Ramos](https://www.linkedin.com/in/carmen-ramart/)
+- [Sara Martínez](https://www.linkedin.com/in/saramartara/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Sara picture](https://github.com/Adalab/project-promo-l-module-3-team-2/blob/readme/web/src/images/readme/sara.png)
