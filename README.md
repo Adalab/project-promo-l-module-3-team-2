@@ -2,7 +2,7 @@
 
 Nuestra misión: refactorizar la web Creatures of Java Script usando React para aprender a trabajar con un código heredado, mantenerlo y actualizarlo con otras tecnologías. Creación de un servidor y una base de datos para almacenar la información de las usuarias. Poner en producción un proyecto completo: front end + back end. Mejorar la comunicación entre los miembros del equipo y con otros equipos de desarrollo.
 
-[Click aquí para el proyecto refactorizado.](https://github.com/Adalab/project-promo-l-module-3-team-2)
+[Click aquí para el proyecto refactorizado.](https://awesome-profile-cards-team2.herokuapp.com/#/)
 
 El proyecto original, [Creatures of Java Script](https://beta.adalab.es/project-promo-l-module-2-team-7/) es una web interactiva para creación de tarjetas de visita digitales creada con JavaScript por un equipo diferente. [Aquí el enlace al repositorio](https://github.com/Adalab/project-promo-l-module-2-team-7) del proyecto original.
 
@@ -53,4 +53,4 @@ npm run deploy
 - [Carmen Ramos](https://www.linkedin.com/in/carmen-ramart/)
 - [Sara Martínez](https://www.linkedin.com/in/saramartara/)
 
-![Sara picture](https://github.com/Adalab/project-promo-l-module-3-team-2/blob/readme/web/src/images/readme/sara.png)
+![Sara picture](https://github.com/Adalab/project-promo-l-module-3-team-2/blob/web/src/images/readme/sara.png)
