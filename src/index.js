@@ -33,59 +33,56 @@ app.get("/card/:id", (req, res) => {
 });
 
 app.post("/card", (req, res) => {
+  const response = {};
   if (!req.body.name || req.body.name === "") {
-    res.status(404).json({
-      success: false,
-      error: "Mandatory fields: name",
-    });
+    response.success = false;
+    response.error = "Mandatory fields: name";
   } else if (!req.body.job || req.body.job.length < 2) {
-    res.status(404).json({
-      success: false,
-      error: "Mandatory fields: job",
-    });
+    response.success = false;
+    response.error = "Mandatory fields: job";
   } else if (!req.body.photo || req.body.photo === "") {
-    res.status(404).json({
-      success: false,
-      error: "Mandatory fields: photo",
-    });
+    response.success = false;
+    response.error = "Mandatory fields: photo";
   } else if (!req.body.email || req.body.email === "") {
-    res.status(404).json({
-      success: false,
-      error: "Mandatory fields: email",
-    });
+    response.success = false;
+    response.error = "Mandatory fields: email";
   } else if (!req.body.phone || req.body.phone === "") {
-    res.status(404).json({
-      success: false,
-      error: "Mandatory fields: phone",
-    });
+    response.success = false;
+    response.error = "Mandatory fields: phone";
   } else if (!req.body.linkedin || req.body.linkedin === "") {
-    res.status(404).json({
-      success: false,
-      error: "Mandatory fields: linkedin",
-    });
+    response.success = false;
+    response.error = "Mandatory fields: linkedin";
   } else if (!req.body.github || req.body.github === "") {
-    res.status(404).json({
-      success: false,
-      error: "Mandatory fields: github",
-    });
+    response.success = false;
+    response.error = "Mandatory fields: github";
   } else {
     // Insertar en la base de datos
-    const query = db.prepare(
-      `INSERT INTO cards (palette, name, job, photo, email, phone, linkedin, github ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
-    );
-    const result = query.run(
-      String(req.body.palette),
-      req.body.name,
-      req.body.job,
-      req.body.photo,
-      req.body.email,
-      req.body.phone,
-      req.body.linkedin,
-      req.body.github
-    );
-    res.json({
-      success: true,
-      cardURL: `http://localhost:3000/card/${result.lastInsertRowid}`,
-    });
+    try {
+      const query = db.prepare(
+        `INSERT INTO cards (palette, name, job, photo, email, phone, linkedin, github ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+      );
+      const result = query.run(
+        String(req.body.palette),
+        req.body.name,
+        req.body.job,
+        req.body.photo,
+        req.body.email,
+        req.body.phone,
+        req.body.linkedin,
+        req.body.github
+      );
+      response.success = true;
+
+      if (req.hostname === "localhost") {
+        response.cardURL = `http://localhost:3000/card/${result.lastInsertRowid}`;
+      } else {
+        response.cardURL = `http://awesome-profile-cards-team2.herokuapp.com/card/${result.lastInsertRowid}`;
+      }
+    } catch (dbError) {
+      response.success = false;
+      response.error = "Error while saving data.";
+    }
   }
+
+  res.json(response);
 });

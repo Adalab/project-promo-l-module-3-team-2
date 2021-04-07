@@ -1,5 +1,4 @@
 import propTypes from "prop-types";
-//import React from "react";
 import "../stylesheets/layout/_share.scss";
 import React, { useState } from "react";
 

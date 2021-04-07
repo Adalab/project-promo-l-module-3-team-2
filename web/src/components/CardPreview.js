@@ -1,4 +1,3 @@
-// import { checkPropTypes } from 'prop-types';
 import React from "react";
 import "../stylesheets/layout/_card.scss";
 import Card from "./Card";

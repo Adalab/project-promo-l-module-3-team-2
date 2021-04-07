@@ -3,7 +3,6 @@ import "../stylesheets/layout/_desing.scss";
 import Palette from "./Palette.js";
 
 function Design(props) {
-  // console.log(props);
   return (
     <div className="design">
       <h2 className="design__title">Colores</h2>
