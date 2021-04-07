@@ -66,18 +66,6 @@ npm run deploy
 
 [<img align="center" src=".\web\src\images\readme\nothing-to-commit-team.png" alt="team" width="350">](https://github.com/Adalab/project-promo-l-module-3-team-2/graphs/contributors)
 
-<!--
-
-[<img align="center" src=".\web\src\images\readme\carmen.png" alt="Carmen picture" title="Carmen linkedin">](https://www.linkedin.com/in/carmen-ramart/)
-
-[<img align="center" src=".\web\src\images\readme\elisa.png" alt="Elisa picture" title="Elisa linkedin">](https://www.linkedin.com/in/elisalcocer/)
-
-[<img align="center" src=".\web\src\images\readme\teresa.png" alt="Teresa picture" title="Teresa linkedin">](https://www.linkedin.com/in/teresamarfer/)
-
-[<img align="center" src=".\web\src\images\readme\sara.png" alt="Sara picture" title="Teresa linkedin">](https://www.linkedin.com/in/saramartara/) -->
-
----
-
 ---
 
 # Nothing to commit: a legacy code case
